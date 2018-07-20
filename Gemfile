@@ -8,7 +8,7 @@ gem 'rails', '5.2.0'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'faker', '1.1.2'
-gem 'will_paginate', '3.0.4'
+gem 'will_paginate', '3.1.5'
 gem 'bootstrap-will_paginate', '0.0.9'
 
 # Use sqlite3 as the database for Active Record
@@ -37,7 +37,7 @@ gem 'jquery-rails', '>= 3.0'
 # gem 'mini_magick', '~> 4.8'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+ gem 'capistrano-rails', group: :development
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -46,6 +46,7 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '>= 3.0'
+   gem 'factory_girl_rails'
 end
 
 group :development do
@@ -59,9 +60,12 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
+  gem 'faker', '= 1.1.2'
+  gem 'guard-rspec'
+  gem 'launchy'
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
-  gem 'factory_girl_rails', '4.2.0'
+  gem 'factory_girl_rails'
   gem 'cucumber-rails', '1.4.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   # Easy installation and use of chromedriver to run system tests with Chrome
