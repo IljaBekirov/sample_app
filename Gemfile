@@ -46,7 +46,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rspec-rails', '>= 3.0'
-   gem 'factory_girl_rails'
+  #gem 'factory_girl_rails'
+  #gem 'factory_bot_rails'  
+  gem 'guard-rspec'
 end
 
 group :development do
@@ -60,12 +62,13 @@ end
 
 group :test do
   # Adds support for Capybara system testing and selenium driver
-  gem 'faker', '= 1.1.2'
-  gem 'guard-rspec'
+  #gem 'faker', '= 1.1.2'
+  #gem 'guard-rspec'
   gem 'launchy'
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
-  gem 'factory_girl_rails'
+  #gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
   gem 'cucumber-rails', '1.4.0', :require => false
   gem 'database_cleaner', github: 'bmabey/database_cleaner'
   # Easy installation and use of chromedriver to run system tests with Chrome
